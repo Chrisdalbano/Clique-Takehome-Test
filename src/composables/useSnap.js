@@ -10,7 +10,7 @@ export function useScrollSnapping(...ids) {
     console.log(section);
     gsap.to(window, {
       scrollTo: {
-        y: section.offsetTop -100,
+        y: section.offsetTop -129,
         autoKill: false,
         ease: "Power3.easeInOut",
         toggleActions: "play reverse play reverse",
