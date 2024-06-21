@@ -1,5 +1,5 @@
 <template>
-  <div ref="wrapper" class="wrapper">
+  <div ref="wrapper" class="wrapper" id="aboutId">
     <!-- About Section -->
     <section ref="aboutSection" class="about-section">
       <div ref="mainParagraph" class="main-paragraph">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </section>
-    <FormComponent />
+    <FormComponent/>
   </div>
 </template>
 <script setup>
@@ -75,14 +75,22 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FormComponent from "../components/FormComponent.vue";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useScrollSnapping } from "../composables/useSnap.js"
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 const wrapper = ref(null);
 const aboutSection = ref(null);
 const mainParagraph = ref(null);
+const snapping = useScrollSnapping("aboutId", "formId");
 
 onMounted(() => {
+ 
+  //Animation for snapping from HeroSection to AboutSection
+  snapping.setup();
+
   // Pin the about section when scrolling
   ScrollTrigger.create({
     trigger: aboutSection.value,
@@ -169,7 +177,7 @@ onMounted(() => {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
-        toggleActions: "play reverse play reverse"
+        toggleActions: "play reverse play reverse",
       },
     }
   );

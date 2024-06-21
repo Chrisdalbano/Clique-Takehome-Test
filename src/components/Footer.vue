@@ -51,11 +51,10 @@ import Logo from "@/components/Logo.vue";
   padding-top: 2rem;
   display: flex;
   flex-direction: row;
-  
 }
 
 .address p {
-    margin-right: 4rem;
+  margin-right: 4rem;
 }
 .footer {
   display: flex;
@@ -152,18 +151,6 @@ import Logo from "@/components/Logo.vue";
 .nav-links a {
   color: white;
   width: auto;
-}
-
-.cta-button {
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #ff4500;
 }
 
 * {
