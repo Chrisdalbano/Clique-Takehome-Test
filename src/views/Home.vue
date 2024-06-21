@@ -1,6 +1,9 @@
 <template>
-
+  <HeroSection />
+  <AboutSection />
 </template>
 
-<script lang="ts">
+<script setup>
+import HeroSection from "../components/HeroSection.vue";
+import AboutSection from "../components/AboutSection.vue";
 </script>

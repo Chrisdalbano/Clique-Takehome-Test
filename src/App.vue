@@ -1,17 +1,13 @@
 <template>
-  <Home />
+  <div id="app">
+    <Navbar />
+    <Home />
+    <Footer />
+  </div>
 </template>
 
-<script lang="ts">
+<script setup>
 import Home from "./views/Home.vue";
-
-export default defineComponent({
-  name: "App",
-  setup() {
-    return {};
-  },
-  components: {
-    Home,
-  },
-});
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 </script>

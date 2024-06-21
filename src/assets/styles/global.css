@@ -1,0 +1,97 @@
+/* Variables */
+:root {
+  --font-family: "Inter", sans-serif;
+  --primary-color: #ff5b01; /* Orange color */
+  --secondary-color: #000000; /* Black color */
+  --third-color: #7D1A73; /* Purple Color*/
+  --background-color: #F1F1F1; /* Light grey background */
+  --text-color: #000000; /* Dark grey text */
+  --heading-font-weight: 700; /* Bold */
+  --semibold-font-weight: 600; /* SemiBold */
+  --body-font-weight: 400; /* Regular */
+  --navbar-max-height: 133px; /* Navbar max height */
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-weight: var(--heading-font-weight);
+  color: var(--text-color);
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-family: var(--font-family);
+  font-weight: var(--body-font-weight);
+  color: var(--text-color);
+  margin: 0 0 15px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: var(--semibold-font-weight);
+  letter-spacing: 2.8px;
+  margin-inline: 12px;
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: var(--third-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
